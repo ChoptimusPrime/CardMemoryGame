@@ -1,0 +1,167 @@
+/* Jon Compton
+Springboard May 26 Cohort */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url("images/grass.jpg");
+}
+
+body, html {
+    height: 100%
+}
+
+.container {
+    height: 100%;
+    display: relative;
+    position: relative;
+    flex-direction: column;
+}
+
+#gameContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#controlBar {
+    height: 50px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#gameField {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#modalContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    visibility: hidden;
+}
+
+#countdownBox {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#countdown {
+    font-size: 5em;
+    text-align: center;
+    color: white;
+}
+
+#topScore {
+    padding-left: 20px;
+}
+
+#currentScore {
+    padding-right: 20px;
+}
+
+#soundBar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+}
+
+#soundButton {
+    height: 25px;
+    width: 90px;
+    color: white;
+    background-color: rebeccapurple;
+    border: none;
+    
+}
+
+#soundButton:active {
+    background-color: red;
+}
+
+
+
+
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.cardContainer {
+    width: 15vw;
+    height: 15vw;
+    perspective: 600px;
+    box-sizing: border-box;
+    transition: transform 0.5s;
+}
+
+.difficultyButton {
+    padding: 6px;
+    text-transform: uppercase;
+}
+
+.faceImage {
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.cardFace {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    background-color: antiquewhite;
+}
+
+.cardFaceFront {
+    transform: rotateY(180deg);
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+
+.cardCover {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    
+}
+
+
+
+
+
